@@ -5,44 +5,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Truck, Monitor, Mail, Phone, MapPin, ArrowRight } from "lucide-react"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { LanguageSelector } from "@/components/language-selector"
+import Header from "@/components/header"
 
 export default function WelcomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50 dark:from-gray-900 dark:to-gray-800">
       {/* Header */}
-      <header className="bg-white dark:bg-gray-900 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <Image src="/logo-no-bg.svg" alt="Company Logo" width={120} height={60} className="h-12 w-auto" />
-          </div>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link
-              href="/transport"
-              className="text-gray-700 dark:text-gray-300 hover:text-orange-600 transition-colors"
-            >
-              Transport
-            </Link>
-            <Link
-              href="/it-solutions"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors"
-            >
-              IT Solutions
-            </Link>
-            <Link href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">
-              Contact
-            </Link>
-            <Link href="/login" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors">
-              Login
-            </Link>
-            <div className="flex items-center space-x-2">
-              <LanguageSelector />
-              <ThemeToggle />
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Header />
+
+      {/* Main Content */}
 
       {/* Hero Section */}
       <section className="py-20 px-4">

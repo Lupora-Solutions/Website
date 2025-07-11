@@ -9,8 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Lupora Solutions - Van jouw visie naar een werkend product",
   description:
-    "Maatwerk IT-oplossingen en transportplanning door Lupora Solutions. Van softwareontwikkeling tot transportautomatisering.",
-    generator: 'v0.dev'
+    "Maatwerk IT-oplossingen en transportplanning door Lupora Solutions. Van softwareontwikkeling tot transportautomatisering."
 }
 
 export default function RootLayout({

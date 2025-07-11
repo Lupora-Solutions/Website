@@ -1,18 +1,13 @@
-"use client"
-
 import type React from "react"
-
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { ArrowLeft, Eye, EyeOff } from "lucide-react"
-import { LanguageSelector } from "@/components/language-selector"
+import { Eye, EyeOff } from "lucide-react"
+import Header from "@/components/header"
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
@@ -30,32 +25,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
       {/* Header */}
       <div className="absolute top-0 left-0 right-0">
-        <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm">
-          <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3">
-              <Image
-                src="/logo-no-bg.svg"
-                alt="Lupora Solutions Logo"
-                width={120}
-                height={60}
-                className="h-12 w-auto"
-              />
-            </Link>
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/"
-                className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Terug naar home
-              </Link>
-              <div className="flex items-center space-x-2">
-                <LanguageSelector />
-                <ThemeToggle />
-              </div>
-            </div>
-          </div>
-        </header>
+        <Header />
       </div>
 
       {/* Login Form */}
